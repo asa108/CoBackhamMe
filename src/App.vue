@@ -1,5 +1,5 @@
 <template>
-  <Vrmonekey width="128" />
+  <Vrmonekey :width="128" />
   <HelloBackham msg="Co.Backham.me" />
 </template>
 
