@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="inner">
-      <div class="co">© Backham Co., Ltd.</div>
+      <div class="co">BACKHAM Co., Ltd.</div>
       <div class="vrmonkey">
         <img
           src="https://storage.googleapis.com/co_backham_me/images/vrmonkey.png"

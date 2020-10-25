@@ -28,5 +28,30 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "./style.scss";
+@mixin title {
+  font-size: 256px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #333355;
+  padding: 0 32px;
+  margin: 0;
+}
+.title {
+  @include title;
+}
+.title2 {
+  @include title;
+  justify-content: center;
+  font-size: 156px;
+  text-align: center;
+}
+.text {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333355;
+  padding: 0 8px;
+  margin: 0;
+  margin-bottom: 16px;
+}
 </style>
