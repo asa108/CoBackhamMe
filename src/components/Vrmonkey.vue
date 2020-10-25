@@ -12,10 +12,14 @@ export default {
       type: Number,
       default: 128,
     },
+    filter: {
+      type: String,
+      default: "",
+    },
   },
   computed: {
     styles() {
-      return `width:${this.width}px`;
+      return `width:${this.width}px;filter:${this.filter}`;
     },
   },
 };

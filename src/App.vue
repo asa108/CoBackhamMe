@@ -1,16 +1,13 @@
 <template>
-  <Vrmonekey :width="128" />
-  <HelloBackham msg="Co.Backham.me" />
+  <Home />
 </template>
 
 <script>
-import Vrmonekey from "./components/Vrmonkey.vue";
-import HelloBackham from "./components/HelloBackham.vue";
+import Home from "./pages/Home.vue";
 export default {
   name: "App",
   components: {
-    HelloBackham,
-    Vrmonekey,
+    Home,
   },
 };
 </script>

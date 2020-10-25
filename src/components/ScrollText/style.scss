@@ -1,0 +1,24 @@
+@mixin title {
+  font-size: 256px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #333355;
+  padding: 0 32px;
+  margin: 0;
+}
+.title {
+  @include title;
+}
+.title2{
+  @include title;
+  font-size: 196px;
+}
+.text {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333355;
+  padding: 0 8px;
+  margin: 0;
+  margin-bottom:16px;
+}
