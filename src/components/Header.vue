@@ -17,13 +17,13 @@ export default {};
 <style lang="scss" scoped>
 .header {
   position: fixed;
-  top: 32px;
+  top: 0;
   left: 0;
   width: 100%;
   height: 56px;
   box-sizing: border-box;
   z-index: 99;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
 }
 .inner {
   display: flex;

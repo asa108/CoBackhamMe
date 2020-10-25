@@ -26,21 +26,22 @@ export default {
 </script>
 <style lang="scss" scoped>
 .toast {
-  color: white;
-  background-color: black;
+  color: #aaa;
+  /* background-color: black; */
   padding: 8px 32px;
-  font-size: 24px;
+  font-size: 20px;
+  letter-spacing: 0.4em;
   border-radius: 24px;
   box-sizing: border-box;
   position: fixed;
-  top: 16px;
-  left: calc(50% - 110px);
-  width: 220px;
+  top: 72px;
+  right: -48px;
+  width: 240px;
   transition: all 0.2s ease-in-out;
-  transform: translateY(-120px);
+  transform: translateY(-220px) rotate(-90deg);
 
   &.in {
-    transform: translateY(0);
+    transform: translateY(0) rotate(-90deg);
   }
 }
 </style>

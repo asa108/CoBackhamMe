@@ -60,7 +60,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .self {
-  width: 80%;
+  width: 90%;
   margin: auto;
   overflow: hidden;
   position: relative;

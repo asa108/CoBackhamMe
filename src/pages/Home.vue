@@ -1,6 +1,6 @@
 <template>
   <Page>
-    <Toast text="SCROLL↓" />
+    <Toast text="⇦SCROLL" />
     <Header />
     <div class="mainTitle">
       <ScrollText text="BACKHAM" :textType="TEXT_TYPE.TITLE2" />
