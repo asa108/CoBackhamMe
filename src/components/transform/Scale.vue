@@ -35,7 +35,7 @@ export default {
   methods: {
     async scroll() {
       //フレームに入った状態を判定
-      inFrame(this.$refs.self, 0.3, ({ result, rate }) => {
+      inFrame(this.$refs.self, 0.3, ({ result }) => {
         this.in = result;
       });
     },

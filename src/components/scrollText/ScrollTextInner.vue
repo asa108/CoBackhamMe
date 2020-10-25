@@ -1,7 +1,7 @@
 <template>
-  <p ref="self">
+  <div class="self" ref="self">
     <div class="inner" :class="showIn">{{ text }}</div>
-  </p>
+  </div>
 </template>
 <script>
 import { inFrame } from "../../util/rectUtil";
@@ -26,7 +26,7 @@ export default {
   methods: {
     async scroll() {
       //フレームに入った状態を判定
-      inFrame(this.$refs.self, 0.3, ({ result, rate }) => {
+      inFrame(this.$refs.self, 0.3, ({ result }) => {
         this.in = result;
       });
     },
@@ -34,7 +34,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-p {
+.self {
   padding: 0 32px;
   margin: 0;
   overflow: hidden;
