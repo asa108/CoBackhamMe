@@ -87,7 +87,6 @@ import Card from "../components/card/Card.vue";
 import LogoMahoumake from "../assets/products/LogoMahoumake.vue";
 import Company from "../components/company/Company.vue";
 import Job from "../components/job/Job.vue";
-import { scrolling } from "../util/scrollCallback.js";
 export default {
   name: "App",
   data: () => {
