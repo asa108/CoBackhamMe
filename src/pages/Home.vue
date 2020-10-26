@@ -2,13 +2,24 @@
   <Page>
     <Toast text="⇦SCROLL" />
     <Header />
+    <!-- BACKHAM -->
     <div class="mainTitle">
       <ScrollText text="BACKHAM" :textType="TEXT_TYPE.TITLE2" />
     </div>
+    <!-- トップの動画 -->
     <Slide>
       <Top />
     </Slide>
-    <!-- <Vrmonkey width="480" filter="hue-rotate(-30deg) brightness(150%)" /> -->
+    <!-- トップ画像の説明 -->
+    <div class="subText">
+      <ScrollText
+        v-for="text in contents.toptext"
+        :key="text"
+        :text="text"
+        :textType="TEXT_TYPE.TEXT"
+      />
+    </div>
+    <!-- 会社説明 -->
     <div class="sectionTitle">
       <ScrollText
         v-for="text in contents.title1"
@@ -93,6 +104,11 @@ export default {
     return {
       TEXT_TYPE,
       contents: {
+        toptext: [
+          "あの人気のコスメがスマホで試せちゃう！？😍",
+          "は試してみたかったあのコスメをどこにいてもスマホのブラウザだけで試し塗りが出来ちゃいます♩",
+          "詳しくは下にスクロール👇",
+        ],
         title1: ["AI", "AR", "DESIGN", "UI/UX", "FRONT", "END"],
         texts1: [
           "We know what it takes to develop a successful AI/AR products.",
@@ -101,11 +117,11 @@ export default {
         title2: ["PRODUCTS"],
         products: [
           {
-            title: "MAHOU MAKE",
+            title: "「MAHOU MAKE」",
             texts: [
-              "Wake up to Make up,",
+              "韓国コスメの",
+              "バーチャルメイクカメラ📷",
               "Right here Right Now!😂😂",
-              "LIVE VIRTUAL MAKE-UP CAMERA",
             ],
             url: "https://mahoumake.com",
           },
