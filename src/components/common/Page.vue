@@ -7,7 +7,7 @@
 </template>
 <script>
 import { scrolling } from "../../util/scrollCallback";
-const col = ["white", "#ffff33", "#eeffff", "#ffeeff"];
+const col = ["white", "#ffffdd", "#ddffff", "#ffddff"];
 export default {
   data: () => {
     return {
