@@ -150,18 +150,11 @@ export default {
     Job,
   },
   mounted() {
-    this.toast();
     this.$nextTick(() => {
       window.scrollTo(200, 0);
     });
   },
-  methods: {
-    toast() {
-      scrolling((value) => {
-        console.log(value);
-      });
-    },
-  },
+  methods: {},
 };
 </script>
 <style lang="scss" scoped>

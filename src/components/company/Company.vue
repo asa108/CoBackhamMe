@@ -17,7 +17,7 @@
       <div class="section">
         <p class="label">Contact</p>
         <p class="value">{{ company.mail }}</p>
-        <p class="value">{{ company.tel }}</p>
+        <!-- <p class="value">{{ company.tel }}</p> -->
       </div>
       <div class="section">
         <p class="label">Established</p>

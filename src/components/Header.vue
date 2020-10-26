@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header" :class="className">
     <div class="inner">
       <div class="co">BACKHAM Co., Ltd.</div>
       <div class="vrmonkey">
@@ -12,7 +12,26 @@
   </div>
 </template>
 <script>
-export default {};
+import { scrolling } from "../util/scrollCallback";
+export default {
+  data: () => {
+    return {
+      className: "",
+    };
+  },
+  props: {
+    text: {
+      type: String,
+      default: "",
+    },
+  },
+  mounted() {
+    scrolling((val) => {
+      console.log("val", val > 200, this.className);
+      this.className = val > 200 ? "header in" : "header";
+    });
+  },
+};
 </script>
 <style lang="scss" scoped>
 .header {
@@ -23,7 +42,12 @@ export default {};
   height: 56px;
   box-sizing: border-box;
   z-index: 99;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-100px);
   /* mix-blend-mode: difference; */
+  &.in {
+    transform: translateY(0);
+  }
 }
 .inner {
   display: flex;
