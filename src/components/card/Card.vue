@@ -64,11 +64,18 @@ export default {
       transform: translateX(0);
     }
   }
+  @media screen and (max-width: 559px) {
+    height: auto;
+    width: 100%;
+  }
 }
 .card {
   display: flex;
   box-sizing: border-box;
   padding: 24px;
+  @media screen and (max-width: 559px) {
+    flex-direction: column;
+  }
 }
 .bg {
   position: absolute;
@@ -107,6 +114,18 @@ export default {
     font-weight: 100;
     text-align: left;
     color: #666;
+  }
+  @media screen and (max-width: 559px) {
+    width: 100%;
+    .title {
+      font-size: 24px;
+      text-align: center;
+    }
+    .text {
+      font-size: 16px;
+      text-align: center;
+      line-height: 14px;
+    }
   }
 }
 .images {

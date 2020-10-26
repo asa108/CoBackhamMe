@@ -27,7 +27,6 @@ export default {
   },
   mounted() {
     scrolling((val) => {
-      console.log("val", val > 200, this.className);
       this.className = val > 200 ? "header in" : "header";
     });
   },

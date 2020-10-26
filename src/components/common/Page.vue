@@ -11,6 +11,10 @@
   justify-content: center;
   .inner {
     max-width: 1200px;
+    @media screen and (max-width: 559px) {
+      width: 100%;
+      max-width: 100%;
+    }
   }
 }
 </style>

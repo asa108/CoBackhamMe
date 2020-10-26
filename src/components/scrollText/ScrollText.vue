@@ -39,12 +39,21 @@ export default {
 }
 .title {
   @include title;
+  @media screen and (max-width: 559px) {
+    font-size: 72px;
+    margin-top: 24px;
+  }
 }
 .title2 {
   @include title;
   justify-content: center;
   font-size: 156px;
   text-align: center;
+  @media screen and (max-width: 559px) {
+    font-size: 56px;
+    width: 100%;
+    padding: 0;
+  }
 }
 .text {
   font-size: 32px;
@@ -53,5 +62,9 @@ export default {
   padding: 0 8px;
   margin: 0;
   margin-bottom: 16px;
+  @media screen and (max-width: 559px) {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
 }
 </style>

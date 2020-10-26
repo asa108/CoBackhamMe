@@ -34,7 +34,10 @@
     </div>
     <Slide>
       <Scale :scaleStart="2.0" :scaleEnd="1.0">
-        <Vrmonkey width="480" filter="hue-rotate(60deg) brightness(150%)" />
+        <Vrmonkey
+          :width="mobileDef(480, 240)"
+          filter="hue-rotate(60deg) brightness(150%)"
+        />
       </Scale>
     </Slide>
     <div class="sectionTitleCenter">
@@ -48,7 +51,7 @@
         :texts="product.texts"
         :url="product.url"
       >
-        <LogoMahoumake width="480" />
+        <LogoMahoumake :width="mobileDef(480, 'auto')" />
       </Card>
     </div>
     <div class="sectionTitleCenter">
@@ -79,9 +82,15 @@
     <Company :company="contents.company" />
     <Slide>
       <Scale :scaleStart="1.5" :scaleEnd="1.0">
-        <Vrmonkey width="480" filter="hue-rotate(60deg) brightness(150%)" />
+        <Vrmonkey
+          :width="mobileDef(480, 240)"
+          filter="hue-rotate(60deg) brightness(150%)"
+        />
       </Scale>
     </Slide>
+    <div class="sectionTitleCenter">
+      <div>© Backham Co., Ltd.</div>
+    </div>
   </Page>
 </template>
 <script>
@@ -98,6 +107,7 @@ import Card from "../components/card/Card.vue";
 import LogoMahoumake from "../assets/products/LogoMahoumake.vue";
 import Company from "../components/company/Company.vue";
 import Job from "../components/job/Job.vue";
+import { isMobile } from "../util/responsive.js";
 export default {
   name: "App",
   data: () => {
@@ -184,7 +194,14 @@ export default {
       window.scrollTo(300, 1);
     });
   },
-  methods: {},
+  methods: {
+    /**
+     * モバイルと通常の値を渡して判定して返す
+     */
+    mobileDef(def, mobile) {
+      return isMobile() ? mobile : def;
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -194,6 +211,11 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  @media screen and (max-width: 559px) {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
 }
 .mainTitle {
   @include sectionTitle;
@@ -207,16 +229,26 @@ export default {
   @include sectionTitle;
   width: 100%;
   margin: 128px auto 64px auto;
+  @media screen and (max-width: 559px) {
+    margin-top: 180px;
+    margin-bottom: 32px;
+  }
 }
 .subText {
-  margin: 32px;
+  margin: 16px 0;
   text-align: left;
-  width: 50%;
+  width: 80%;
+  @media screen and (max-width: 559px) {
+    width: 100%;
+  }
 }
 .subTextCenter {
   margin: 32px;
   text-align: center;
   width: 100%;
+  @media screen and (max-width: 559px) {
+    margin: 0;
+  }
 }
 .jobs {
   text-align: center;

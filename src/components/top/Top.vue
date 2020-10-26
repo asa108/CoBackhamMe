@@ -41,8 +41,16 @@ export default {
     height: 140%;
     transform: scale(1.5);
   }
-  @media screen and (max-width: 480px) {
-    height: 440px;
+  @media screen and (max-width: 559px) {
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    video {
+      transform: scale(1);
+      &:first-child {
+        display: none;
+      }
+    }
   }
 }
 

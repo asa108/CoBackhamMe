@@ -43,5 +43,8 @@ export default {
   &.in {
     transform: translateY(0) rotate(-90deg);
   }
+  @media screen and (max-width: 559px) {
+    right: -80px;
+  }
 }
 </style>
