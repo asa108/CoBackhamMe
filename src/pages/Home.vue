@@ -115,11 +115,26 @@ export default {
         title4: ["CAREER"],
         texts4: ["Let’s create something valuable together."],
         jobs: [
-          { title: "DESIGNER", url: "" },
-          { title: "SENIER ENGINEER", url: "" },
-          { title: "FRONTEND ENGINEER", url: "" },
-          { title: "PYTHON ENGINEER", url: "" },
-          { title: "MARKETING PLANNER", url: "" },
+          {
+            title: "DESIGNER",
+            url: "https://www.jobantenna.jp/at/17001/offer/292820/",
+          },
+          {
+            title: "SENIER ENGINEER",
+            url: "https://www.jobantenna.jp/at/17001/offer/291487/",
+          },
+          {
+            title: "FRONTEND ENGINEER",
+            url: "https://www.jobantenna.jp/at/17001/offer/285823/",
+          },
+          {
+            title: "PYTHON ENGINEER",
+            url: "https://www.jobantenna.jp/at/17001/offer/285820/",
+          },
+          {
+            title: "MARKETING PLANNER",
+            url: "https://www.jobantenna.jp/at/17001/offer/285827/",
+          },
         ],
         title5: ["COMPANY"],
         company: {
@@ -151,7 +166,7 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
-      window.scrollTo(200, 0);
+      window.scrollTo(300, 1);
     });
   },
   methods: {},
