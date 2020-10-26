@@ -40,8 +40,9 @@ export default {
 .title {
   @include title;
   @media screen and (max-width: 559px) {
-    font-size: 72px;
+    font-size: 96px;
     margin-top: 24px;
+    padding: 0;
   }
 }
 .title2 {
@@ -50,7 +51,7 @@ export default {
   font-size: 156px;
   text-align: center;
   @media screen and (max-width: 559px) {
-    font-size: 56px;
+    font-size: 64px;
     width: 100%;
     padding: 0;
   }
