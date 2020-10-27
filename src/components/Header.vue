@@ -1,13 +1,8 @@
 <template>
   <div class="header" :class="className">
     <div class="inner">
-      <div class="co">BACKHAM Co., Ltd.</div>
-      <div class="vrmonkey">
-        <img
-          src="https://storage.googleapis.com/co_backham_me/images/vrmonkey.png"
-          alt="vrmonkey"
-        />
-      </div>
+      <div class="item">BACKHAM Co., Ltd.</div>
+      <a class="item" href="https://blog.backham.me" target="_blank">BLOG</a>
     </div>
   </div>
 </template>
@@ -43,29 +38,29 @@ export default {
   z-index: 99;
   transition: all 0.3s ease-in-out;
   transform: translateY(-100px);
-  /* mix-blend-mode: difference; */
+  mix-blend-mode: difference;
   &.in {
     transform: translateY(0);
   }
 }
 .inner {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   width: 100%;
+  height: 100%;
 }
-.co {
-  font-size: 14px;
-  color: black;
-}
-.vrmonkey {
-  width: 48px;
-  padding: 8px;
-  display: none;
-  img {
-    width: 100%;
+.item {
+  padding: 4px 8px;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  transition: all 0.2s ease-out;
+  margin: 0 8px;
+  color: #660000;
+  &:hover {
+    background-color: rgba(128, 128, 128, 0.3);
+    border-radius: 24px;
   }
 }
 </style>
