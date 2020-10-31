@@ -15,7 +15,7 @@ const inFrame = (ref, _margin = 0.0, callback) => {
   const winHeight = window.innerHeight;
   const margin = window.innerHeight * _margin;
 
-  scrolling((scrollTop) => {
+  scrolling(() => {
     const rect = ref.getBoundingClientRect();
     //コンポーネントの表示領域
     const visibleHeight = window.innerHeight + rect.height;
@@ -34,7 +34,7 @@ const inFrame = (ref, _margin = 0.0, callback) => {
 };
 
 const fixTop = (ref, callback) => {
-  scrolling((scrollTop) => {
+  scrolling(() => {
     const rect = ref.getBoundingClientRect();
     const fix = 0 >= rect.top;
     callback({ fix });
@@ -42,7 +42,7 @@ const fixTop = (ref, callback) => {
 };
 
 const fixBottom = (ref, callback) => {
-  scrolling((scrollTop) => {
+  scrolling(() => {
     const rect = ref.getBoundingClientRect();
     const fix = window.innerHeight >= rect.top + rect.height;
     callback({ fix });
