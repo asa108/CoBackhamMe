@@ -51,7 +51,7 @@ const CONTENTS = {
       title: "MAHOU MAKE",
       description: "Wake up to Make up,Right here Right Now!😂😂",
       links: ["https://mahoumake.com"],
-      movies: [
+      items: [
         "https://storage.googleapis.com/co_backham_me/works/MAHOUMAKE_32.mp4"
       ]
     }
@@ -61,7 +61,7 @@ const CONTENTS = {
     title: "OFFICE",
     description: "",
     links: ["https://backham.me"],
-    images: [
+    items: [
       "https://storage.googleapis.com/co_backham_me/works/office2.jpg",
       "https://storage.googleapis.com/co_backham_me/works/office1.jpg",
       "https://storage.googleapis.com/co_backham_me/works/office3.jpg",
