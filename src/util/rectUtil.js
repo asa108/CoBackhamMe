@@ -2,7 +2,7 @@ import { scrolling } from "./scrollCallback";
 
 //フレームに入ってから出るまでを正規化
 const normalize = (vheight, sheight) => {
-  return (1.0 - sheight / vheight).toFixed(2);
+  return (1.0 - sheight / vheight - 1).toFixed(2);
 };
 
 /**
@@ -23,10 +23,29 @@ const inFrame = (ref, _margin = 0.0, callback) => {
     const bottomAfter = 0 + margin < rect.top + rect.height;
     const result = topBefore && bottomAfter;
     //スクロール量
-    const scrollValue = rect.top + rect.height - scrollTop;
+    const scrollValue = rect.top - (winHeight - margin);
     const rate = normalize(visibleHeight, scrollValue);
     //スクロール量を正規化
-    callback({ result, rate });
+    callback({
+      result,
+      rate
+    });
+  });
+};
+
+const fixTop = (ref, callback) => {
+  scrolling((scrollTop) => {
+    const rect = ref.getBoundingClientRect();
+    const fix = 0 >= rect.top;
+    callback({ fix });
+  });
+};
+
+const fixBottom = (ref, callback) => {
+  scrolling((scrollTop) => {
+    const rect = ref.getBoundingClientRect();
+    const fix = window.innerHeight >= rect.top + rect.height;
+    callback({ fix });
   });
 };
 
@@ -38,4 +57,4 @@ const asyncInFrame = async (ref) => {
   });
 };
 
-export { inFrame, asyncInFrame };
+export { inFrame, asyncInFrame, fixTop, fixBottom };

@@ -1,5 +1,5 @@
 <template>
-  <div class="page" :class="vec ? 'flip' : ''" :style="getRandomColor()">
+  <div ref="page" class="page" :class="vec ? 'flip' : ''" :style="getStyle()">
     <div class="inner">
       <slot></slot>
     </div>
@@ -13,17 +13,27 @@ export default {
     return {
       vec: true,
       col: col[0],
+      page: null,
+      height: 0,
+      move: "",
     };
   },
   mounted() {
     let prev = 0;
+    // this.page = this.$refs.page;
+    // this.$nextTick(() => {
+    //   this.height = this.page.getBoundingClientRect().height;
+    //   this.move = `top:-${this.height}px;`;
+    // });
     scrolling((val) => {
       this.vec = prev > val;
       prev = val;
+      // console.log(this.height, val, -(this.height - val));
+      // this.move = `top:-${this.height - val}px`;
     });
   },
   methods: {
-    getRandomColor() {
+    getStyle() {
       const index = Math.floor(Math.random() * col.length);
       return this.vec ? `background-color:${col[index]}` : ``;
     },
@@ -34,14 +44,13 @@ export default {
 .page {
   display: flex;
   justify-content: center;
+  position: relative;
   .inner {
-    max-width: 1200px;
     @media screen and (max-width: 559px) {
       width: 100%;
-      max-width: 100%;
     }
   }
-  transition: all 1.6s ease-out;
+  /* transition: all 1.6s ease-out; */
   background-color: transparent;
   &.flip {
     mix-blend-mode: luminosity;

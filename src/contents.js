@@ -4,12 +4,12 @@ const CONTENTS = {
     "試してみたかったあのコスメをどこにいてもスマホのブラウザだけで試し塗りが出来ちゃいます♩",
     "詳しくは下にスクロール👇"
   ],
-  title1: ["AI", "AR", "DESIGN", "UI/UX", "FRONT", "END"],
+  TITLES: ["AI", "AR", "DESIGN", "UI/UX", "FRONT", "END"],
   texts1: [
     "We know what it takes to develop a successful AI/AR products.",
     "That's why we deliver success and make your apps stand out in the market."
   ],
-  title2: ["PRODUCTS"],
+  PRODUCTS: ["PRODUCTS"],
   products: [
     {
       title: "「MAHOU MAKE」",
@@ -21,8 +21,8 @@ const CONTENTS = {
       url: "https://mahoumake.com"
     }
   ],
-  title3: ["WORKS"],
-  title4: ["CAREER"],
+  WORKS: ["WORKS"],
+  CAREER: ["CAREER"],
   texts4: ["Let’s create something valuable together."],
   jobs: [
     {
@@ -46,7 +46,29 @@ const CONTENTS = {
       url: "https://www.jobantenna.jp/at/17001/offer/285827/"
     }
   ],
-  title5: ["COMPANY"],
+  works: {
+    MAHOUMAKE: {
+      title: "MAHOU MAKE",
+      description: "------------",
+      links: ["https://mahoumake.com"],
+      movies: [
+        "https://storage.googleapis.com/co_backham_me/works/MAHOUMAKE_32.mp4"
+      ]
+    }
+  },
+  COMPANY: ["COMPANY"],
+  companyimages: {
+    title: "OFFICE",
+    description: "",
+    links: ["https://backham.me"],
+    images: [
+      "https://storage.googleapis.com/co_backham_me/works/office1.jpg",
+      "https://storage.googleapis.com/co_backham_me/works/office2.jpg",
+      "https://storage.googleapis.com/co_backham_me/works/office3.jpg",
+      "https://storage.googleapis.com/co_backham_me/works/office4.jpg",
+      "https://storage.googleapis.com/co_backham_me/works/office5.jpg"
+    ]
+  },
   company: {
     name: "バッカム株式会社",
     address: "〒901-2131 沖縄県浦添市牧港 3-22-5 🗺",
