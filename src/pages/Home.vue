@@ -1,8 +1,8 @@
 <template>
-  <Page>
+  <Page ref="page">
     <Toast text="⇦SCROLL" />
     <Header />
-
+    <Cycle :pageRect="pageRect" />
     <!-- BACKHAM -->
     <Maxwidth :max="maxwidth">
       <div class="mainTitle">
@@ -128,6 +128,7 @@ import { isMobile } from "../util/responsive.js";
 import { CONTENTS } from "../contents.js";
 import Images from "../media/Images.vue";
 import Movies from "../media/Movies.vue";
+import Cycle from "../components/cycle/Cycle.vue";
 import Maxwidth from "../components/common/Maxwidth.vue";
 
 export default {
@@ -137,6 +138,7 @@ export default {
       TEXT_TYPE,
       contents: CONTENTS,
       maxwidth: ["100%;", "1200px"],
+      selfRect: null,
     };
   },
   components: {
@@ -155,10 +157,12 @@ export default {
     Images,
     Movies,
     Maxwidth,
+    Cycle,
   },
   mounted() {
     this.$nextTick(() => {
       window.scrollTo(300, 1);
+      this.pageRect = this.$refs.page.getRect();
     });
   },
   methods: {

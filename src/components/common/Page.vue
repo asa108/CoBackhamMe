@@ -33,6 +33,9 @@ export default {
     });
   },
   methods: {
+    getRect() {
+      return this.$refs.page.getBoundingClientRect();
+    },
     getStyle() {
       const index = Math.floor(Math.random() * col.length);
       return this.vec ? `background-color:${col[index]}` : ``;
