@@ -8,6 +8,9 @@
       >
         <div class="title">{{ content.title }}</div>
         <div class="description">{{ content.description }}</div>
+        <div class="gage">
+          <Gage :rate="rate" />
+        </div>
         <div class="scale">
           <div
             ref="items"
@@ -24,6 +27,7 @@
 </template>
 <script>
 import Mediaframe from "./Mediaframe";
+import Gage from "../components/gage/Gage.vue";
 import { inFrame } from "../util/rectUtil";
 
 const POS = {
@@ -43,6 +47,7 @@ export default {
   },
   components: {
     Mediaframe,
+    Gage,
   },
   props: {
     height: Number,
@@ -106,6 +111,15 @@ export default {
   .description {
     font-size: 18px;
     padding: 8px;
+  }
+  .gage {
+    position: absolute;
+    left: 16px;
+    top: 35%;
+    width: 200px;
+    transform-origin: top left;
+    transform: rotate(45deg);
+    z-index: 99;
   }
   .items {
     height: 70%;
