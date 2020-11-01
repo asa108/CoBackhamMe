@@ -7,6 +7,11 @@
         :class="getFix(context.top, context.bottom)"
       >
         <div class="title">{{ content.title }}</div>
+        <div class="tags">
+          <div class="tag" v-for="tag in content.tag" :key="tag">
+            {{ tag }}
+          </div>
+        </div>
         <div class="description">{{ content.description }}</div>
         <div class="gage">
           <Gage :rate="rate" />
@@ -110,7 +115,25 @@ export default {
   }
   .description {
     font-size: 18px;
-    padding: 8px;
+    padding: 8px 24px;
+    max-width: 400px;
+    margin: auto;
+    text-align: left;
+    white-space: pre-line;
+  }
+  .tags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .tag {
+      font-size: 12px;
+      padding: 2px 8px;
+      margin: 0 2px;
+      background-color: black;
+      color: white;
+      border-radius: 4px;
+    }
   }
   .gage {
     position: absolute;
@@ -122,10 +145,10 @@ export default {
     z-index: 99;
   }
   .items {
-    height: 70%;
+    height: 80%;
     position: absolute;
     left: 0;
-    top: 10%;
+    top: 5%;
     display: flex;
     justify-content: center;
     /* transition: all 0.1s; */

@@ -16,7 +16,7 @@ const CONTENTS = {
       texts: [
         "韓国コスメの",
         "バーチャルメイクカメラ📷",
-        "Right here Right Now!😂😂"
+        "Wake up to Make up,Right here Right Now!😂😂"
       ],
       url: "https://mahoumake.com"
     }
@@ -47,9 +47,21 @@ const CONTENTS = {
     }
   ],
   works: {
+    NAILHOLIC: {
+      title: "KOSE NAILHOLIC",
+      description:
+        "膨大な数の爪の形状の学習、200以上のネイルを3D上でシュミレート、iOS/Androidアプリに実装しました。",
+      tag: ["AI", "AR", "APP"],
+      links: ["https://mahoumake.com"],
+      items: [
+        "https://storage.googleapis.com/co_backham_me/works/MAHOUMAKE_32.mp4"
+      ]
+    },
     MAHOUMAKE: {
       title: "MAHOU MAKE",
-      description: "Wake up to Make up,Right here Right Now!😂😂",
+      description:
+        "スマホのブラウザ上で動画のバーチャルコスメを実現、AIによるフェイス検出、CMSによるコスメデータ管理、仮想環境による環境の冗長化",
+      tag: ["AI", "AR", "FRONTEND", "UI/UX"],
       links: ["https://mahoumake.com"],
       items: [
         "https://storage.googleapis.com/co_backham_me/works/MAHOUMAKE_32.mp4"
