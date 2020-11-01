@@ -16,7 +16,7 @@ const CONTENTS = {
       texts: [
         "韓国コスメの",
         "バーチャルメイクカメラ📷",
-        "Wake up to Make up,Right here Right Now!😂😂"
+        "Wake up to Make up,\nRight here Right Now!😂😂"
       ],
       url: "https://mahoumake.com"
     }
@@ -72,7 +72,7 @@ const CONTENTS = {
   companyimages: {
     title: "OFFICE",
     description: "",
-    links: ["https://backham.me"],
+    links: [null],
     items: [
       "https://storage.googleapis.com/co_backham_me/works/office2.jpg",
       "https://storage.googleapis.com/co_backham_me/works/office1.jpg",

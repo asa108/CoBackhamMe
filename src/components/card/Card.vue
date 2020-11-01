@@ -114,6 +114,7 @@ export default {
     font-weight: 100;
     text-align: left;
     color: #666;
+    white-space: pre-line;
   }
   @media screen and (max-width: 559px) {
     width: 100%;

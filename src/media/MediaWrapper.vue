@@ -6,7 +6,19 @@
         class="frame"
         :class="getFix(context.top, context.bottom)"
       >
-        <div class="title">{{ content.title }}</div>
+        <div class="title">
+          {{ content.title }}
+          <a
+            v-if="content.links[0]"
+            :href="content.links[0]"
+            target="_blank"
+            class="link"
+          >
+            <img
+              src="https://storage.googleapis.com/co_backham_me/images/launch-24px.svg"
+            />
+          </a>
+        </div>
         <div class="tags">
           <div class="tag" v-for="tag in content.tag" :key="tag">
             {{ tag }}
@@ -112,6 +124,16 @@ export default {
     margin-top: 32px;
     font-size: 32px;
     padding: 8px;
+  }
+  .link {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    color: black;
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
   }
   .description {
     font-size: 18px;
