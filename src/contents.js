@@ -88,8 +88,7 @@ const CONTENTS = {
     mail: "victoria@backham.me",
     tel: "090-8497-5761",
     established: "2014.1",
-    outline:
-      "バッカムは、デザインとテクノロジーのクリエイティブカンパニーです。これまでクライアント様よりご依頼頂いた案件を、「今」に合ったデザイン力・技術力で確かなカタチとしてご提案し、それを実現させて頂いてきました。バッカムはクリエイティブで新しい世界の可能性を追求していきます。"
+    outline: "AI,AR,Programming,Design,3D,UI/UX"
   }
 };
 
