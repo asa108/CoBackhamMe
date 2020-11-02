@@ -15,7 +15,7 @@
       <!-- トップ画像の説明 -->
       <div class="subText">
         <ScrollText
-          v-for="text in contents.toptext"
+          v-for="text in contents.TOPTEXTS"
           :key="text"
           :text="text"
           :textType="TEXT_TYPE.TEXT"
@@ -30,8 +30,14 @@
         />
       </div>
       <div class="subText">
-        <ScrollText :text="contents.texts1[0]" :textType="TEXT_TYPE.TEXT" />
-        <ScrollText :text="contents.texts1[1]" :textType="TEXT_TYPE.TEXT" />
+        <ScrollText
+          :text="contents.TOPSUBTEXTS[0]"
+          :textType="TEXT_TYPE.TEXT"
+        />
+        <ScrollText
+          :text="contents.TOPSUBTEXTS[1]"
+          :textType="TEXT_TYPE.TEXT"
+        />
       </div>
       <Slide>
         <Scale :scaleStart="2.0" :scaleEnd="1.0">
@@ -46,26 +52,27 @@
     <!-- PRODUCTS -->
     <Maxwidth :max="maxwidth">
       <div class="sectionTitleCenter">
-        <ScrollText :text="contents.PRODUCTS[0]" :textType="TEXT_TYPE.TITLE2" />
+        <ScrollText
+          :text="contents.PRODUCTS.title"
+          :textType="TEXT_TYPE.TITLE2"
+        />
       </div>
       <div>
         <Card
-          v-for="product in contents.products"
-          :key="product.title"
-          :title="product.title"
-          :texts="product.texts"
-          :url="product.url"
+          :title="contents.PRODUCTS.products.MAHOUMAKE.title"
+          :texts="contents.PRODUCTS.products.MAHOUMAKE.texts"
+          :url="contents.PRODUCTS.products.MAHOUMAKE.url"
         >
           <LogoMahoumake :width="mobileDef('480', 'auto')" />
         </Card>
       </div>
     </Maxwidth>
-    <Movies :height="4000" :content="contents.works.MAHOUMAKE" />
+    <Movies :height="4000" :content="contents.WORKS.works.MAHOUMAKE" />
 
     <!-- WORKS -->
     <Maxwidth :max="maxwidth">
       <div class="sectionTitleCenter">
-        <ScrollText :text="contents.WORKS[0]" :textType="TEXT_TYPE.TITLE2" />
+        <ScrollText :text="contents.WORKS.title" :textType="TEXT_TYPE.TITLE2" />
       </div>
     </Maxwidth>
     <!-- 事例が入るまではUnder Construction -->
@@ -77,14 +84,20 @@
     <!-- 求人 -->
     <Maxwidth :max="maxwidth">
       <div class="sectionTitleCenter">
-        <ScrollText :text="contents.CAREER[0]" :textType="TEXT_TYPE.TITLE2" />
+        <ScrollText
+          :text="contents.CAREER.title"
+          :textType="TEXT_TYPE.TITLE2"
+        />
       </div>
       <div class="subTextCenter">
-        <ScrollText :text="contents.texts4[0]" :textType="TEXT_TYPE.TEXT" />
+        <ScrollText
+          :text="contents.CAREER.description"
+          :textType="TEXT_TYPE.TEXT"
+        />
       </div>
       <div class="jobs">
         <Job
-          v-for="job in contents.jobs"
+          v-for="job in contents.CAREER.jobs"
           :key="job.title"
           :title="job.title"
           :url="job.url"
@@ -95,12 +108,15 @@
     <!-- 会社情報 -->
     <Maxwidth :max="maxwidth">
       <div class="sectionTitleCenter">
-        <ScrollText :text="contents.COMPANY[0]" :textType="TEXT_TYPE.TITLE2" />
+        <ScrollText
+          :text="contents.COMPANY.title"
+          :textType="TEXT_TYPE.TITLE2"
+        />
       </div>
     </Maxwidth>
-    <Images :height="4000" :content="contents.companyimages" />
+    <Images :height="4000" :content="contents.COMPANY.images" />
     <Maxwidth :max="maxwidth">
-      <Company :company="contents.company" />
+      <Company :company="contents.COMPANY.info" />
       <Slide>
         <Scale :scaleStart="1.5" :scaleEnd="1.0">
           <Vrmonkey
