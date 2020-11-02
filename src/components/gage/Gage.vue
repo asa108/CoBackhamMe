@@ -7,7 +7,10 @@
 <script>
 export default {
   props: {
-    rate: Number,
+    rate: {
+      type: Number,
+      default: 1,
+    },
     color: {
       type: Object,
       default: () => {

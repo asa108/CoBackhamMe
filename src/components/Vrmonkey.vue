@@ -9,8 +9,8 @@
 export default {
   props: {
     width: {
-      type: Number,
-      default: 128,
+      type: String,
+      default: "auto",
     },
     filter: {
       type: String,

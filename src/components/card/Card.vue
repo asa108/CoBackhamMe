@@ -35,10 +35,8 @@ export default {
       },
     },
     url: {
-      type: Array,
-      default: () => {
-        return [];
-      },
+      type: String,
+      default: "",
     },
   },
   components: {

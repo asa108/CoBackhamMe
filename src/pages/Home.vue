@@ -36,7 +36,7 @@
       <Slide>
         <Scale :scaleStart="2.0" :scaleEnd="1.0">
           <Vrmonkey
-            :width="maxwidth"
+            :width="mobileDef('480', 'auto')"
             filter="hue-rotate(60deg) brightness(150%)"
           />
         </Scale>
@@ -56,7 +56,7 @@
           :texts="product.texts"
           :url="product.url"
         >
-          <LogoMahoumake :width="mobileDef(480, 'auto')" />
+          <LogoMahoumake :width="mobileDef('480', 'auto')" />
         </Card>
       </div>
     </Maxwidth>
@@ -104,7 +104,7 @@
       <Slide>
         <Scale :scaleStart="1.5" :scaleEnd="1.0">
           <Vrmonkey
-            :width="mobileDef(480, 240)"
+            :width="mobileDef('480', '240')"
             filter="hue-rotate(60deg) brightness(150%)"
           />
         </Scale>
@@ -144,6 +144,7 @@ export default {
       contents: CONTENTS,
       maxwidth: ["100%;", "1200px"],
       selfRect: null,
+      pageRect: null,
     };
   },
   components: {

@@ -18,6 +18,7 @@ export default {
   props: {
     pageRect: {
       type: DOMRect,
+      default: {},
     },
   },
   mounted() {

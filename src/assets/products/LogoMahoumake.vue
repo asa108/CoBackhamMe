@@ -8,7 +8,7 @@
 <script>
 export default {
   props: {
-    width: Number,
+    width: String,
   },
   computed: {
     getStyle() {

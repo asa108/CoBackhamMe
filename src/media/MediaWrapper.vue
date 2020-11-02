@@ -43,7 +43,7 @@
   </Mediaframe>
 </template>
 <script>
-import Mediaframe from "./Mediaframe";
+import Mediaframe from "./Mediaframe.vue";
 import Gage from "../components/gage/Gage.vue";
 import { inFrame } from "../util/rectUtil";
 
@@ -60,6 +60,7 @@ export default {
       rate: 0.0,
       imageWidth: 0,
       isCenter: false,
+      scrollx: "",
     };
   },
   components: {
@@ -99,9 +100,9 @@ export default {
       // let timer;
       //フレームに入った状態を判定
       inFrame(this.$refs.self, 0.5, ({ result, rate }) => {
-        this.rate = rate;
+        this.rate = +rate;
         this.in = result;
-        this.pos = this.rate < 0.5 ? POS.TOP : POS.BOTTOM;
+        this.pos = this.rate < 0.5 ? +POS.TOP : +POS.BOTTOM;
         const _width = this.$refs.items.getBoundingClientRect().width;
         const _winWidth = window.innerWidth;
         if (this.rate >= 0.0) {

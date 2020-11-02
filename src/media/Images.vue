@@ -6,7 +6,7 @@
   </MediaWrapper>
 </template>
 <script>
-import MediaWrapper from "./MediaWrapper";
+import MediaWrapper from "./MediaWrapper.vue";
 
 export default {
   components: {
