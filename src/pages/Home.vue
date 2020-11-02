@@ -63,11 +63,12 @@
     <Movies :height="4000" :content="contents.works.MAHOUMAKE" />
 
     <!-- WORKS -->
-    <!-- <Maxwidth :max="maxwidth">
+    <Maxwidth :max="maxwidth">
       <div class="sectionTitleCenter">
         <ScrollText :text="contents.WORKS[0]" :textType="TEXT_TYPE.TITLE2" />
       </div>
-    </Maxwidth> -->
+    </Maxwidth>
+    <!-- ここに事例を追加 Images/Moviesどちらかのコンポーネントで追加する -->
 
     <!-- 求人 -->
     <Maxwidth :max="maxwidth">
