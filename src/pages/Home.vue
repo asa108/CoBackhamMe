@@ -68,6 +68,10 @@
         <ScrollText :text="contents.WORKS[0]" :textType="TEXT_TYPE.TITLE2" />
       </div>
     </Maxwidth>
+    <!-- 事例が入るまではUnder Construction -->
+    <div class="subTextCenter">
+      <ScrollText text="Under Construction" :textType="TEXT_TYPE.TEXT" />
+    </div>
     <!-- ここに事例を追加 Images/Moviesどちらかのコンポーネントで追加する -->
 
     <!-- 求人 -->
