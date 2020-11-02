@@ -1,6 +1,6 @@
 <template>
   <img
-    src="https://storage.googleapis.com/mahou_make/logo-mark-shadow.svg"
+    src="https://storage.googleapis.com/co_backham_me/works/LOGO_MAHOUMAKE.svg"
     alt="MAHOU MAKE"
     :style="getStyle"
   />
