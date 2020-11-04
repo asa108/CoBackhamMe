@@ -76,10 +76,11 @@
       </div>
     </Maxwidth>
     <!-- 事例が入るまではUnder Construction -->
-    <div class="subTextCenter">
+    <!-- <div class="subTextCenter">
       <ScrollText text="Under Construction" :textType="TEXT_TYPE.TEXT" />
-    </div>
+    </div> -->
     <!-- ここに事例を追加 Images/Moviesどちらかのコンポーネントで追加する -->
+    <Images :height="4000" :content="contents.WORKS.works.NAILHOLIC" />
 
     <!-- 求人 -->
     <Maxwidth :max="maxwidth">
