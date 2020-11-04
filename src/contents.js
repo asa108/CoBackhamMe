@@ -59,7 +59,8 @@ const CONTENTS = {
         tag: ["AI", "AR", "APP"],
         links: ["https://mahoumake.com"],
         items: [
-          "https://storage.googleapis.com/co_backham_me/works/MAHOUMAKE_32.mp4"
+          "https://storage.googleapis.com/co_backham_me/works/nailholic1.jpg",
+          "https://storage.googleapis.com/co_backham_me/works/nailholic2.jpg"
         ]
       },
       MAHOUMAKE: {
