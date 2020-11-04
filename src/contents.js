@@ -60,7 +60,8 @@ const CONTENTS = {
         links: ["https://mahoumake.com"],
         items: [
           "https://storage.googleapis.com/co_backham_me/works/nailholic1.jpg",
-          "https://storage.googleapis.com/co_backham_me/works/nailholic2.jpg"
+          "https://storage.googleapis.com/co_backham_me/works/nailholic2.jpg",
+          "https://storage.googleapis.com/co_backham_me/works/nailholic3.jpg"
         ]
       },
       MAHOUMAKE: {
