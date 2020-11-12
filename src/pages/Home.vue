@@ -101,6 +101,7 @@
           :key="job.title"
           :title="job.title"
           :url="job.url"
+          :active="job.active"
         />
       </div>
     </Maxwidth>

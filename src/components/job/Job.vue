@@ -1,5 +1,5 @@
 <template>
-  <a :href="url" class="job">
+  <a :href="url" class="job" :class="active ? '' : 'inactive'">
     <div>{{ title }}</div>
   </a>
 </template>
@@ -8,6 +8,7 @@ export default {
   props: {
     title: String,
     url: String,
+    active: Boolean,
   },
 };
 </script>
@@ -28,6 +29,17 @@ export default {
   &:hover {
     background-color: #efefef;
     transform: scale(1.03);
+  }
+
+  &.inactive {
+    color: #aaa;
+    text-decoration: line-through;
+    pointer-events: none;
+
+    &:hover {
+      background-color: #ccc;
+      transform: scale(1);
+    }
   }
 }
 </style>

@@ -29,23 +29,28 @@ const CONTENTS = {
     jobs: [
       {
         title: "DESIGNER",
-        url: "https://www.jobantenna.jp/at/17001/offer/292820/"
+        url: "https://www.jobantenna.jp/at/17001/offer/292820/",
+        active: false
       },
       {
         title: "SENIER ENGINEER",
-        url: "https://www.jobantenna.jp/at/17001/offer/291487/"
+        url: "https://www.jobantenna.jp/at/17001/offer/291487/",
+        active: true
       },
       {
         title: "FRONTEND ENGINEER",
-        url: "https://www.jobantenna.jp/at/17001/offer/285823/"
+        url: "https://www.jobantenna.jp/at/17001/offer/285823/",
+        active: false
       },
       {
         title: "PYTHON ENGINEER",
-        url: "https://www.jobantenna.jp/at/17001/offer/285820/"
+        url: "https://www.jobantenna.jp/at/17001/offer/285820/",
+        active: false
       },
       {
         title: "MARKETING PLANNER",
-        url: "https://www.jobantenna.jp/at/17001/offer/285827/"
+        url: "https://www.jobantenna.jp/at/17001/offer/285827/",
+        active: true
       }
     ]
   },
