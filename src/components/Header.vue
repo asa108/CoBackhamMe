@@ -2,7 +2,7 @@
   <div class="header" :class="className">
     <div class="inner">
       <a class="item" href="/">BACKHAM Co., Ltd.</a>
-      <!-- <a class="item" href="/works">WORKS</a> -->
+      <a class="item" href="/works">WORKS</a>
       <a class="item" href="https://blog.backham.me" target="_blank">BLOG</a>
     </div>
   </div>
