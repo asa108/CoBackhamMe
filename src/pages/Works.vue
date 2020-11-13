@@ -1,5 +1,5 @@
 <template>
-  <Page :effect="false" ref="page" style="height: 2000px">
+  <Page :effect="false" ref="page">
     <Toast text="⇦SCROLL" />
     <Header />
     <Cycle :pageRect="pageRect" />
