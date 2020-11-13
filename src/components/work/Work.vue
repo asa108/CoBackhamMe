@@ -210,8 +210,6 @@ $w_width: 200%;
   &:hover {
     transform: scale(0.92);
     cursor: pointer;
-    background-color: #efefef;
-    border-radius: 24px;
   }
 
   &.detail {
@@ -236,7 +234,6 @@ $w_width: 200%;
     top: 0;
     left: 0;
     z-index: 99;
-    // border-radius: 0;
   }
 
   &.fitHeight {
@@ -292,7 +289,7 @@ $w_width: 200%;
           padding: 4px 8px;
           color: white;
           background-color: black;
-          margin: 0 4px;
+          margin: 4px;
           border-radius: 2px;
           font-weight: 600;
         }
@@ -317,11 +314,12 @@ $w_width: 200%;
       box-sizing: border-box;
 
       .image {
-        width: 90%;
+        width: auto;
         height: 100%;
+        max-height: 100%;
         margin: auto;
         box-sizing: border-box;
-        overflow: hidden;
+
         img {
           width: auto;
           height: auto;
@@ -330,7 +328,19 @@ $w_width: 200%;
         }
       }
     }
+
+    @include repsSP {
+      flex-direction: column;
+
+      .work-summary__info {
+        width: 100%;
+      }
+      .work-summary__image {
+        width: 100%;
+      }
+    }
   }
+
   .work-detail {
     width: $base_width;
     height: 100%;
@@ -341,6 +351,17 @@ $w_width: 200%;
     .work-detail__inner {
       position: relative;
       width: $base_width;
+
+      .image {
+        padding: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          max-height: 90vh;
+        }
+      }
 
       &:after {
         content: "";

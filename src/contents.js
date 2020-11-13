@@ -68,31 +68,23 @@ const CONTENTS = {
     title: "WORKS",
     list: [
       {
-        key: "nailholic",
-        title: "KOSE NAILHOLIC",
+        key: "banto",
+        title: "CYDAS banto",
         description:
-          "膨大な数の爪の形状の学習、200以上のネイルを3D上でシュミレート、iOS/Androidアプリに実装しました。",
-        tag: ["AI", "AR", "APP"],
-        links: [
-          { label: "NAIL HOLIC", url: "https://www.kose.co.jp/nailholic/" },
-          { label: "ios", url: "https://apps.apple.com/us/app/id1526411199" },
-          {
-            label: "android",
-            url:
-              "https://play.google.com/store/apps/details?id=jp.co.kose.nailholic"
-          }
-        ],
+          "目標設定・進捗管理サービス「Banto」フロントエンド設計・実装をVue.jsで行いました",
+        tag: ["FRONTEND", "JAVASCRIPT", "VUE"],
+        links: [{ label: "banto", url: "https://banto.jp/" }],
         items: [
-          "https://storage.googleapis.com/co_backham_me/works/nailholic_ui1_resized.jpg",
-          "https://storage.googleapis.com/co_backham_me/works/nailholic_ui2_resized.jpg",
-          "https://storage.googleapis.com/co_backham_me/works/nailholic_ui3_resized.jpg"
+          "https://storage.googleapis.com/co_backham_me/works/banto_ui1.jpg",
+          "https://storage.googleapis.com/co_backham_me/works/banto_ui2.jpg",
+          "https://storage.googleapis.com/co_backham_me/works/banto_ui3.jpg"
         ]
       },
       {
         key: "nailholic",
         title: "KOSE NAILHOLIC",
         description:
-          "膨大な数の爪の形状の学習、200以上のネイルを3D上でシュミレート、iOS/Androidアプリに実装しました。",
+          "膨大な数の爪の形状の学習、200以上のネイルを3D上でシュミレート、iOS/Androidアプリに実装しました",
         tag: ["AI", "AR", "APP"],
         links: [
           { label: "NAIL HOLIC", url: "https://www.kose.co.jp/nailholic/" },
@@ -104,27 +96,7 @@ const CONTENTS = {
           }
         ],
         items: [
-          "https://storage.googleapis.com/co_backham_me/works/nailholic_ui1_resized.jpg",
-          "https://storage.googleapis.com/co_backham_me/works/nailholic_ui2_resized.jpg",
-          "https://storage.googleapis.com/co_backham_me/works/nailholic_ui3_resized.jpg"
-        ]
-      },
-      {
-        key: "nailholic",
-        title: "KOSE NAILHOLIC",
-        description:
-          "膨大な数の爪の形状の学習、200以上のネイルを3D上でシュミレート、iOS/Androidアプリに実装しました。",
-        tag: ["AI", "AR", "APP"],
-        links: [
-          { label: "NAIL HOLIC", url: "https://www.kose.co.jp/nailholic/" },
-          { label: "ios", url: "https://apps.apple.com/us/app/id1526411199" },
-          {
-            label: "android",
-            url:
-              "https://play.google.com/store/apps/details?id=jp.co.kose.nailholic"
-          }
-        ],
-        items: [
+          "https://storage.googleapis.com/co_backham_me/works/nailholic_splash.jpg",
           "https://storage.googleapis.com/co_backham_me/works/nailholic_ui1_resized.jpg",
           "https://storage.googleapis.com/co_backham_me/works/nailholic_ui2_resized.jpg",
           "https://storage.googleapis.com/co_backham_me/works/nailholic_ui3_resized.jpg"
