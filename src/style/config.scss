@@ -1,0 +1,21 @@
+// レスポンシブ
+$BREAK: 960px; 
+$BREAK_TAB: 559px; 
+
+@mixin repsPC {
+  @media (min-width: $BREAK + 1)  {
+    @content;
+  }
+}
+
+@mixin repsTAB {
+  @media (min-width: $BREAK_TAB + 1)  {
+    @content;
+  }
+}
+
+@mixin repsSP {
+  @media (max-width: ($BREAK_TAB)) {
+    @content;
+  }
+}

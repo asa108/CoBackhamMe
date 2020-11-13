@@ -133,6 +133,7 @@ export default {
   },
   methods: {
     showMore() {
+      // showDetail > fitHeight > fix & slideIn
       if (!this.showDetail) {
         this.slideDetail();
       }
@@ -190,5 +191,214 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "./work.scss";
+@import "/src/style/config.scss";
+
+$default_width: 80%;
+$base_width: 100%;
+$w_width: 200%;
+
+.work {
+  position: relative;
+  width: $default_width;
+  height: 80vh;
+  margin: auto;
+  background-color: white;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0.9);
+
+  &:hover {
+    transform: scale(0.92);
+    cursor: pointer;
+    background-color: #efefef;
+    border-radius: 24px;
+  }
+
+  &.detail {
+    transform: scale(1);
+
+    .work-inner {
+      transform: translateX(-100vw);
+    }
+
+    .work-detail-header {
+      transform: translateY(0);
+    }
+
+    &:hover {
+      cursor: default;
+      transform: scale(1);
+    }
+  }
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    // border-radius: 0;
+  }
+
+  &.fitHeight {
+    width: $base_width;
+    height: 100vh;
+  }
+
+  .work-inner {
+    width: $w_width;
+    height: 100% !important;
+    display: flex;
+    align-items: flex-start;
+    transition: all 0.3s ease-out;
+    transform: translateX(0);
+  }
+
+  .work-summary {
+    width: $base_width;
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+
+    .work-summary__info {
+      width: 40%;
+      padding: 24px;
+      box-sizing: border-box;
+
+      .summary-title {
+        margin-top: 16px;
+        font-size: 14px;
+        color: #888;
+        text-align: left;
+      }
+
+      .title {
+        text-align: left;
+        font-size: 38px;
+        font-weight: 600;
+        padding: 8px 0;
+      }
+      .description {
+        text-align: left;
+        font-size: 16px;
+        padding: 8px 0;
+      }
+
+      .tags {
+        padding: 8px 0;
+        text-align: left;
+        .tag {
+          display: inline-block;
+          font-size: 12px;
+          padding: 4px 8px;
+          color: white;
+          background-color: black;
+          margin: 0 4px;
+          border-radius: 2px;
+          font-weight: 600;
+        }
+      }
+
+      .links {
+        text-align: left;
+        .link {
+          display: inline-block;
+          height: 48px;
+          margin-right: 24px;
+          vertical-align: middle;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    .work-summary__image {
+      width: 60%;
+      padding: 24px;
+      box-sizing: border-box;
+
+      .image {
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        box-sizing: border-box;
+        overflow: hidden;
+        img {
+          width: auto;
+          height: auto;
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+    }
+  }
+  .work-detail {
+    width: $base_width;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: scroll;
+
+    .work-detail__inner {
+      position: relative;
+      width: $base_width;
+
+      &:after {
+        content: "";
+        display: block;
+        height: 120px;
+      }
+    }
+  }
+}
+
+.BtnClose {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease;
+  transform: scale(1);
+  z-index: 1;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+  }
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $base_width;
+  height: 150%;
+  background-color: black;
+  transition-delay: 0.5s;
+  transition: all 0.3s ease-out;
+  transform: translateY(0);
+
+  &.in {
+    transform: translateY(-150%);
+  }
+}
+
+.work-detail-header {
+  position: fixed;
+  top: 36px;
+  left: $base_width;
+  width: $base_width;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  mix-blend-mode: difference;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(30%);
+
+  .work-detail-title {
+    font-size: 24px;
+    text-align: center;
+  }
+}
 </style>

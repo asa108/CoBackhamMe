@@ -1,5 +1,5 @@
-$base_width:100vw;
-$w_width:200vw;
+$base_width:100%;
+$w_width:200%;
 
 .work {
   position: relative;
@@ -19,6 +19,7 @@ $w_width:200vw;
 
   &.detail {
     transform: scale(1);
+    width: $base_width;
     
     .work-inner {
       transform: translateX(-100vw);
