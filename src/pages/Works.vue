@@ -27,7 +27,6 @@ import { TEXT_TYPE } from "../components/scrollText/textType";
 import { CONTENTS } from "../contents.js";
 import Cycle from "../components/cycle/Cycle.vue";
 import Work from "../components/work/Work.vue";
-import Maxwidth from "../components/common/Maxwidth.vue";
 
 export default {
   name: "Works",
@@ -47,7 +46,6 @@ export default {
     ScrollText,
     Cycle,
     Work,
-    Maxwidth,
   },
   mounted() {
     this.$nextTick(() => {
