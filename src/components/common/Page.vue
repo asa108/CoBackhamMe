@@ -1,5 +1,10 @@
 <template>
-  <div ref="page" class="page" :class="vec ? 'flip' : ''" :style="getStyle()">
+  <div
+    ref="page"
+    class="page"
+    :class="effect & vec ? 'flip' : ''"
+    :style="getStyle()"
+  >
     <div class="inner">
       <slot></slot>
     </div>
@@ -18,18 +23,18 @@ export default {
       move: "",
     };
   },
+  props: {
+    //Tennetエフェクトをかけない
+    effect: {
+      type: Boolean,
+      default: true,
+    },
+  },
   mounted() {
     let prev = 0;
-    // this.page = this.$refs.page;
-    // this.$nextTick(() => {
-    //   this.height = this.page.getBoundingClientRect().height;
-    //   this.move = `top:-${this.height}px;`;
-    // });
     scrolling((val) => {
       this.vec = prev > val;
       prev = val;
-      // console.log(this.height, val, -(this.height - val));
-      // this.move = `top:-${this.height - val}px`;
     });
   },
   methods: {
@@ -37,8 +42,12 @@ export default {
       return this.$refs.page.getBoundingClientRect();
     },
     getStyle() {
-      const index = Math.floor(Math.random() * col.length);
-      return this.vec ? `background-color:${col[index]}` : ``;
+      if (!this.effect) {
+        return "background-color:white;";
+      } else {
+        const index = Math.floor(Math.random() * col.length);
+        return this.vec ? `background-color:${col[index]}` : ``;
+      }
     },
   },
 };

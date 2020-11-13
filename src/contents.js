@@ -19,7 +19,17 @@ const CONTENTS = {
           "バーチャルメイクカメラ📷",
           "Wake up to Make up,\nRight here Right Now!😂😂"
         ],
-        url: "https://mahoumake.com"
+        url: "https://mahoumake.com",
+        media: {
+          title: "MAHOU MAKE",
+          description:
+            "スマホのブラウザ上で動画のバーチャルコスメを実現、AIによるフェイス検出、CMSによるコスメデータ管理、仮想環境による環境の冗長化",
+          tag: ["AI", "AR", "FRONTEND", "UI/UX"],
+          links: ["https://mahoumake.com"],
+          items: [
+            "https://storage.googleapis.com/co_backham_me/works/MAHOUMAKE_32.mp4"
+          ]
+        }
       }
     }
   },
@@ -56,28 +66,71 @@ const CONTENTS = {
   },
   WORKS: {
     title: "WORKS",
-    works: {
-      NAILHOLIC: {
+    list: [
+      {
+        key: "nailholic",
         title: "KOSE NAILHOLIC",
         description:
           "膨大な数の爪の形状の学習、200以上のネイルを3D上でシュミレート、iOS/Androidアプリに実装しました。",
         tag: ["AI", "AR", "APP"],
-        links: ["https://mahoumake.com"],
+        links: [
+          { label: "NAIL HOLIC", url: "https://www.kose.co.jp/nailholic/" },
+          { label: "ios", url: "https://apps.apple.com/us/app/id1526411199" },
+          {
+            label: "android",
+            url:
+              "https://play.google.com/store/apps/details?id=jp.co.kose.nailholic"
+          }
+        ],
         items: [
-          "https://storage.googleapis.com/co_backham_me/works/MAHOUMAKE_32.mp4"
+          "https://storage.googleapis.com/co_backham_me/works/nailholic_ui1_resized.jpg",
+          "https://storage.googleapis.com/co_backham_me/works/nailholic_ui2_resized.jpg",
+          "https://storage.googleapis.com/co_backham_me/works/nailholic_ui3_resized.jpg"
         ]
       },
-      MAHOUMAKE: {
-        title: "MAHOU MAKE",
+      {
+        key: "nailholic",
+        title: "KOSE NAILHOLIC",
         description:
-          "スマホのブラウザ上で動画のバーチャルコスメを実現、AIによるフェイス検出、CMSによるコスメデータ管理、仮想環境による環境の冗長化",
-        tag: ["AI", "AR", "FRONTEND", "UI/UX"],
-        links: ["https://mahoumake.com"],
+          "膨大な数の爪の形状の学習、200以上のネイルを3D上でシュミレート、iOS/Androidアプリに実装しました。",
+        tag: ["AI", "AR", "APP"],
+        links: [
+          { label: "NAIL HOLIC", url: "https://www.kose.co.jp/nailholic/" },
+          { label: "ios", url: "https://apps.apple.com/us/app/id1526411199" },
+          {
+            label: "android",
+            url:
+              "https://play.google.com/store/apps/details?id=jp.co.kose.nailholic"
+          }
+        ],
         items: [
-          "https://storage.googleapis.com/co_backham_me/works/MAHOUMAKE_32.mp4"
+          "https://storage.googleapis.com/co_backham_me/works/nailholic_ui1_resized.jpg",
+          "https://storage.googleapis.com/co_backham_me/works/nailholic_ui2_resized.jpg",
+          "https://storage.googleapis.com/co_backham_me/works/nailholic_ui3_resized.jpg"
+        ]
+      },
+      {
+        key: "nailholic",
+        title: "KOSE NAILHOLIC",
+        description:
+          "膨大な数の爪の形状の学習、200以上のネイルを3D上でシュミレート、iOS/Androidアプリに実装しました。",
+        tag: ["AI", "AR", "APP"],
+        links: [
+          { label: "NAIL HOLIC", url: "https://www.kose.co.jp/nailholic/" },
+          { label: "ios", url: "https://apps.apple.com/us/app/id1526411199" },
+          {
+            label: "android",
+            url:
+              "https://play.google.com/store/apps/details?id=jp.co.kose.nailholic"
+          }
+        ],
+        items: [
+          "https://storage.googleapis.com/co_backham_me/works/nailholic_ui1_resized.jpg",
+          "https://storage.googleapis.com/co_backham_me/works/nailholic_ui2_resized.jpg",
+          "https://storage.googleapis.com/co_backham_me/works/nailholic_ui3_resized.jpg"
         ]
       }
-    }
+    ]
   },
   COMPANY: {
     title: "COMPANY",

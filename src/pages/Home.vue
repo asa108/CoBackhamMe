@@ -67,7 +67,10 @@
         </Card>
       </div>
     </Maxwidth>
-    <Movies :height="4000" :content="contents.WORKS.works.MAHOUMAKE" />
+    <Movies
+      :height="4000"
+      :content="contents.PRODUCTS.products.MAHOUMAKE.media"
+    />
 
     <!-- WORKS -->
     <Maxwidth :max="maxwidth">
@@ -199,51 +202,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@mixin sectionTitle {
-  width: 90%;
-  margin: 64px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  @media screen and (max-width: 559px) {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-}
-.mainTitle {
-  @include sectionTitle;
-  height: 80vh;
-  align-items: center;
-}
-.sectionTitle {
-  @include sectionTitle;
-}
-.sectionTitleCenter {
-  @include sectionTitle;
-  width: 100%;
-  margin: 128px auto 64px auto;
-  @media screen and (max-width: 559px) {
-    margin-top: 180px;
-    margin-bottom: 32px;
-  }
-}
-.subText {
-  margin: 16px 0;
-  text-align: left;
-  width: 80%;
-  @media screen and (max-width: 559px) {
-    width: 100%;
-  }
-}
-.subTextCenter {
-  margin: 32px;
-  text-align: center;
-  width: 100%;
-  @media screen and (max-width: 559px) {
-    margin: 0;
-  }
-}
+@import "./pages.scss";
 .jobs {
   text-align: center;
 }
