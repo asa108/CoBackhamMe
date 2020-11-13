@@ -23,7 +23,6 @@ import Toast from "../components/toast/toast.vue";
 import { TEXT_TYPE } from "../components/scrollText/textType";
 import { CONTENTS } from "../contents.js";
 import Cycle from "../components/cycle/Cycle.vue";
-import Maxwidth from "../components/common/Maxwidth.vue";
 import Work from "../components/work/Work.vue";
 
 export default {
@@ -42,7 +41,6 @@ export default {
     Header,
     Toast,
     ScrollText,
-    Maxwidth,
     Cycle,
     Work,
   },
@@ -56,6 +54,4 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "./pages.scss";
-.works {
-}
 </style>
