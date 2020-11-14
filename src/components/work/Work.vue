@@ -370,6 +370,18 @@ $w_width: 200%;
       }
     }
   }
+  @include repsSP {
+    .work-detail__inner {
+      .image {
+        padding: 0;
+        img {
+          width: 90%;
+          margin: 5%;
+          max-height: none;
+        }
+      }
+    }
+  }
 }
 
 .BtnClose {
