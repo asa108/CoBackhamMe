@@ -465,9 +465,8 @@ $w_width: 200%;
   left: 100vw;
   width: 100vw;
   height: 100vh;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
   transform: translateY(64px);
-  filter: blur(4px);
   opacity: 0;
   display: flex;
   justify-content: center;
@@ -483,7 +482,6 @@ $w_width: 200%;
 
   &.in {
     opacity: 0.8;
-    filter: blur(0);
     transform: translateY(0);
   }
 }
