@@ -85,7 +85,7 @@ const CONTENTS = {
         title: "KOSE NAILHOLIC",
         description:
           "膨大な数の爪の形状の学習、200以上のネイルを3D上でシュミレート、iOS/Androidアプリに実装しました",
-        tag: ["AI", "AR", "APP"],
+        tag: ["AI", "AR", "APP", "C#", "UNITY", "PYTHON"],
         links: [
           { label: "NAIL HOLIC", url: "https://www.kose.co.jp/nailholic/" },
           { label: "ios", url: "https://apps.apple.com/us/app/id1526411199" },
