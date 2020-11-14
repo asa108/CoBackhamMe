@@ -53,6 +53,9 @@
             </div>
           </div>
         </div>
+        <div class="count-down" :class="countDownValue ? 'in' : ''">
+          <div class="label">{{ countDownValue }}</div>
+        </div>
         <button class="BtnClose" @click="showClose">
           <WindowClose style="font-size: 24px" />
         </button>
@@ -79,6 +82,8 @@ export default {
       revTop: 0, //詳細開く前のスクロール座標
       body: document.getElementsByTagName("body")[0],
       workScroll: null,
+      scrollMargin: 600, //最後のスクロールの空白ピピクセル
+      countDownValue: 0, //最後までスクロールしてから画面切り替えまでのカウントダウン
     };
   },
   props: {
@@ -103,6 +108,14 @@ export default {
     },
   },
   mounted() {
+    const countDown = [
+      { label: null, scroll: 0 },
+      { label: 3, scroll: 100 },
+      { label: 2, scroll: 300 },
+      { label: 1, scroll: 500 },
+      { label: 0, scroll: 600 },
+    ];
+
     //詳細画面の中のスクロールを検知して、
     //最後までスクロールしたら詳細を閉じる
     this.workScroll = this.$refs.workDetail;
@@ -111,6 +124,17 @@ export default {
       const height = this.workScroll.getBoundingClientRect().height;
       const inner_height = this.$refs.workDetailInner.getBoundingClientRect()
         .height;
+
+      //カウントダウン
+      const base = inner_height - this.scrollMargin;
+      const scroll_over = scroll + height - base;
+      const counter = countDown.find((count) => {
+        return count.scroll > scroll_over;
+      });
+      if (counter) {
+        this.countDownValue = counter.label;
+      }
+
       //閉じる
       if (inner_height - 1 < scroll + height) {
         setTimeout(() => {
@@ -366,7 +390,7 @@ $w_width: 200%;
       &:after {
         content: "";
         display: block;
-        height: 120px;
+        height: 600px;
       }
     }
   }
@@ -432,6 +456,35 @@ $w_width: 200%;
   .work-detail-title {
     font-size: 24px;
     text-align: center;
+  }
+}
+
+.count-down {
+  position: fixed;
+  bottom: 32px;
+  left: 100vw;
+  width: 100vw;
+  height: 100vh;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(64px);
+  filter: blur(4px);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 99;
+
+  .label {
+    text-align: center;
+    font-size: 128px;
+    color: black;
+  }
+
+  &.in {
+    opacity: 0.8;
+    filter: blur(0);
+    transform: translateY(0);
   }
 }
 </style>
