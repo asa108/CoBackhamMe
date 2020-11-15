@@ -80,7 +80,9 @@
     </Maxwidth>
     <!-- 事例が入るまではUnder Construction -->
     <div class="subTextCenter">
-      <ScrollText text="Under Construction" :textType="TEXT_TYPE.TEXT" />
+      <button @click="openWorks" class="btn-icon">
+        <ArrowRightThick style="font-size: 128px" />
+      </button>
     </div>
     <!-- ここに事例を追加 Images/Moviesどちらかのコンポーネントで追加する -->
 
@@ -155,6 +157,8 @@ import Images from "../media/Images.vue";
 import Movies from "../media/Movies.vue";
 import Cycle from "../components/cycle/Cycle.vue";
 import Maxwidth from "../components/common/Maxwidth.vue";
+import Button from "../components/button/Button.vue";
+import { ArrowRightThick } from "mdue";
 
 export default {
   name: "App",
@@ -184,6 +188,8 @@ export default {
     Movies,
     Maxwidth,
     Cycle,
+    Button,
+    ArrowRightThick,
   },
   mounted() {
     this.$nextTick(() => {
@@ -198,6 +204,9 @@ export default {
     mobileDef(def, mobile) {
       return isMobile() ? mobile : def;
     },
+    openWorks() {
+      this.$router.push("/works");
+    },
   },
 };
 </script>
@@ -205,5 +214,15 @@ export default {
 @import "./pages.scss";
 .jobs {
   text-align: center;
+}
+.btn-icon {
+  outline: none;
+  background: none;
+  border: none;
+  transition: all 0.3s ease-out;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+  }
 }
 </style>
