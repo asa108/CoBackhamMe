@@ -8,9 +8,6 @@
       <ScrollText :text="contents.WORKS.title" :textType="TEXT_TYPE.TITLE2" />
     </div>
     <!-- 事例が入るまではUnder Construction -->
-    <div class="subTextCenter">
-      <ScrollText text="Under Construction" :textType="TEXT_TYPE.TEXT" />
-    </div>
     <div class="works">
       <div v-for="work in contents.WORKS.list" :key="work.key">
         <Work :contents="work" />
