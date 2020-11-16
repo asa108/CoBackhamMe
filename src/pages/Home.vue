@@ -157,7 +157,6 @@ import Images from "../media/Images.vue";
 import Movies from "../media/Movies.vue";
 import Cycle from "../components/cycle/Cycle.vue";
 import Maxwidth from "../components/common/Maxwidth.vue";
-import Button from "../components/button/Button.vue";
 import { ArrowRightThick } from "mdue";
 
 export default {
@@ -188,7 +187,6 @@ export default {
     Movies,
     Maxwidth,
     Cycle,
-    Button,
     ArrowRightThick,
   },
   mounted() {
