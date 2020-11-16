@@ -103,7 +103,7 @@ export default {
     contents: {
       immediate: true,
       handler(newval) {
-        console.log(newval.items[0]);
+        // console.log(newval.items[0]);
       },
     },
   },
@@ -209,7 +209,7 @@ export default {
         this.fix = false;
         this.showDetail = false;
         this.fitHeight = false;
-      }, 800);
+      }, 1000);
     },
   },
 };

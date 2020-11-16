@@ -103,6 +103,7 @@ export default {
         this.rate = +rate;
         this.in = result;
         this.pos = this.rate < 0.5 ? +POS.TOP : +POS.BOTTOM;
+        if (!this.$refs.items) return;
         const _width = this.$refs.items.getBoundingClientRect().width;
         const _winWidth = window.innerWidth;
         if (this.rate >= 0.0) {
