@@ -99,14 +99,6 @@ export default {
       },
     },
   },
-  watch: {
-    contents: {
-      immediate: true,
-      handler(newval) {
-        // console.log(newval.items[0]);
-      },
-    },
-  },
   mounted() {
     const countDown = [
       { label: null, scroll: 0 },
