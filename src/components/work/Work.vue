@@ -41,6 +41,9 @@
             <img :src="contents.items[0]" alt="" />
           </div>
         </div>
+        <div class="work-summary__hover">
+          <ArrowRightThick />
+        </div>
       </div>
       <div ref="workDetail" class="work-detail">
         <div class="work-detail-header">
@@ -65,13 +68,14 @@
   </div>
 </template>
 <script>
-import { WindowClose, AppleIos, Android } from "mdue";
+import { WindowClose, AppleIos, Android, ArrowRightThick } from "mdue";
 
 export default {
   components: {
     WindowClose,
     AppleIos,
     Android,
+    ArrowRightThick,
   },
   data: () => {
     return {
@@ -226,6 +230,12 @@ $w_width: 200%;
   &:hover {
     transform: scale(0.92);
     cursor: pointer;
+
+    .work-summary {
+      .work-summary__hover {
+        opacity: 1;
+      }
+    }
   }
 
   &.detail {
@@ -271,6 +281,18 @@ $w_width: 200%;
     height: 100%;
     display: flex;
     box-sizing: border-box;
+    position: relative;
+
+    .work-summary__hover {
+      position: absolute;
+      width: 128px;
+      height: 128px;
+      top: calc(50% - 64px);
+      left: calc(50% - 64px);
+      font-size: 128px;
+      opacity: 0;
+      transition: opacity 0.3s ease-out;
+    }
 
     .work-summary__info {
       width: 40%;
