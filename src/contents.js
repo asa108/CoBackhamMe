@@ -109,14 +109,10 @@ const CONTENTS = {
         tag: ["", "", ""],
         links: [{ label: "okinawa_oju", url: "https://okinawa-iju.jp/" }],
         items: [
-          "https://storage.googleapis.com/co_backham_me/works/iju1_home.jpg",
-          "https://storage.googleapis.com/co_backham_me/works/iju2_home_m.jpg",
-          "https://storage.googleapis.com/co_backham_me/works/iju3_guide.jpg",
-          "https://storage.googleapis.com/co_backham_me/works/iju4_guide_m.jpg",
-          "https://storage.googleapis.com/co_backham_me/works/iju5_event.jpg",
-          "https://storage.googleapis.com/co_backham_me/works/iju6_event_m.jpg",
-          "https://storage.googleapis.com/co_backham_me/works/iju7_yonaguni.jpg",
-          "https://storage.googleapis.com/co_backham_me/works/iju8_yonaguni_m.jpg"
+          "https://storage.googleapis.com/co_backham_me/works/iju-1.jpg",
+          "https://storage.googleapis.com/co_backham_me/works/iju-2.jpg",
+          "https://storage.googleapis.com/co_backham_me/works/iju-3.jpg",
+          "https://storage.googleapis.com/co_backham_me/works/iju-4.jpg"
         ]
       }
     ]
