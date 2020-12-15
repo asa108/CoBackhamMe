@@ -106,7 +106,7 @@ const CONTENTS = {
         key: "okinawa_iju",
         title: "おきなわ島ぐらし",
         description:
-          "沖縄県公式移住情報サイト。Wordpressをヘッドレス化し、フロントエンドを全てVue.jsで実装。定型コンテンツを誰でも扱えるGoogle spreadsheetで管理し変更を自動的にジェネレートしてデプロイしています。",
+          "沖縄県公式移住情報サイト。情報設計、UI設計、システムを全面的にリプレース。モバイルに最適化し、リニューアル後は「沖縄 + 移住」で常に検索結果の１位を獲得し以降１位を維持し、月間のアクセス数が前年比で1.5倍に増加しました。",
         tag: ["FRONTEND", "JAVASCRIPT", "VUE", "WORDPRESS", "CI", "NODE.JS"],
         links: [
           {
