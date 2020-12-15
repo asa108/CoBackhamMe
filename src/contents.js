@@ -108,7 +108,12 @@ const CONTENTS = {
         description:
           "沖縄県公式移住情報サイト。Wordpressをヘッドレス化し、フロントエンドを全てVue.jsで実装。定型コンテンツを誰でも扱えるGoogle spreadsheetで管理し変更を自動的にジェネレートしてデプロイしています。",
         tag: ["FRONTEND", "JAVASCRIPT", "VUE", "WORDPRESS", "CI", "NODE.JS"],
-        links: [{ label: "okinawa_iju", url: "https://okinawa-iju.jp/" }],
+        links: [
+          {
+            label: "沖縄県公式移住応援サイト おきなわ島ぐらし",
+            url: "https://okinawa-iju.jp/"
+          }
+        ],
         items: [
           "https://storage.googleapis.com/co_backham_me/works/iju-1.jpg",
           "https://storage.googleapis.com/co_backham_me/works/iju-2.jpg",
