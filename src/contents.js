@@ -101,6 +101,19 @@ const CONTENTS = {
           "https://storage.googleapis.com/co_backham_me/works/nailholic_ui2_resized.jpg",
           "https://storage.googleapis.com/co_backham_me/works/nailholic_ui3_resized.jpg"
         ]
+      },
+      {
+        key: "okinawa_iju",
+        title: "沖縄移住",
+        description: "",
+        tag: ["", "", ""],
+        links: [{ label: "okinawa_oju", url: "https://okinawa-iju.jp/" }],
+        items: [
+          "https://storage.googleapis.com/co_backham_me/works/iju-1.jpg",
+          "https://storage.googleapis.com/co_backham_me/works/iju-2.jpg",
+          "https://storage.googleapis.com/co_backham_me/works/iju-3.jpg",
+          "https://storage.googleapis.com/co_backham_me/works/iju-4.jpg"
+        ]
       }
     ]
   },
