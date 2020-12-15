@@ -104,10 +104,11 @@ const CONTENTS = {
       },
       {
         key: "okinawa_iju",
-        title: "沖縄移住",
-        description: "",
-        tag: ["", "", ""],
-        links: [{ label: "okinawa_oju", url: "https://okinawa-iju.jp/" }],
+        title: "おきなわ島ぐらし",
+        description:
+          "沖縄県公式移住情報サイト。Wordpressをヘッドレス化し、フロントエンドを全てVue.jsで実装。定型コンテンツを誰でも扱えるGoogle spreadsheetで管理し変更を自動的にジェネレートしてデプロイしています。",
+        tag: ["FRONTEND", "JAVASCRIPT", "VUE", "WORDPRESS", "CI", "NODE.JS"],
+        links: [{ label: "okinawa_iju", url: "https://okinawa-iju.jp/" }],
         items: [
           "https://storage.googleapis.com/co_backham_me/works/iju-1.jpg",
           "https://storage.googleapis.com/co_backham_me/works/iju-2.jpg",
