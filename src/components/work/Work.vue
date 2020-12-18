@@ -1,7 +1,7 @@
 <template>
   <div ref="self" class="work" :class="getClass" @click="showMore">
     <div class="work-inner">
-      <div class="work-summary">
+      <div ref="mouseTarget" class="work-summary">
         <div class="work-summary__info">
           <div class="title">{{ contents.title }}</div>
           <div class="description">
@@ -41,10 +41,8 @@
             <img :src="contents.items[0]" alt="" />
           </div>
         </div>
-        <div class="work-summary__hover">
-          <ArrowRightThick />
-        </div>
       </div>
+
       <div ref="workDetail" class="work-detail">
         <div class="work-detail-header">
           <div class="work-detail-title">{{ contents.title }}</div>
@@ -68,14 +66,13 @@
   </div>
 </template>
 <script>
-import { WindowClose, AppleIos, Android, ArrowRightThick } from "mdue";
+import { WindowClose, AppleIos, Android } from "mdue";
 
 export default {
   components: {
     WindowClose,
     AppleIos,
     Android,
-    ArrowRightThick,
   },
   data: () => {
     return {
@@ -152,6 +149,9 @@ export default {
     },
   },
   methods: {
+    getRefs() {
+      return this.$refs;
+    },
     showMore() {
       // showDetail > fitHeight > fix & slideIn
       if (!this.showDetail) {
