@@ -137,9 +137,9 @@ body a:hover {
 
 #stalker {
   position: absolute;
-  width: 40px;
-  height: 40px;
-  margin: -80px 0 0 -40px;
+  width: 50px;
+  height: 50px;
+  margin: -75px 0 0 -25px;
   z-index: 5; /*一番手前に来るように*/
   opacity: 0; /*開いた瞬間非表示*/
   transition: transform 0.1s;
