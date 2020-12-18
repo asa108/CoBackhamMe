@@ -141,8 +141,6 @@ body a:hover {
   height: 40px;
   margin: -80px 0 0 -40px;
   z-index: 5; /*一番手前に来るように*/
-  background-color: #89c997;
-  border-radius: 50%;
   opacity: 0; /*開いた瞬間非表示*/
   transition: transform 0.1s;
   pointer-events: none; /*マウス直下に常にstalker要素がくるのでホバー要素が働かなくなる。noneにすることでstalkerを無視する*/
