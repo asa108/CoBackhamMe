@@ -12,7 +12,7 @@
     <!--マウスストーカー-->
     <ArrowRightThick
       id="stalker"
-      v-bind:style="{
+      :style="{
         opacity: opacityB,
         top: posY + 'px',
         left: posX + 'px',
