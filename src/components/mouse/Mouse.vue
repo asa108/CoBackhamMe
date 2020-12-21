@@ -1,18 +1,18 @@
 <template>
   <div>
     <!--カーソル-->
-    <!-- <p
+    <p
       id="cursor"
       v-bind:style="{
         opacity: opacityA,
         top: mouseY + 'px',
-        left: mouseX + 'px'
+        left: mouseX + 'px',
       }"
-    ></p> -->
+    ></p>
     <!--マウスストーカー-->
     <ArrowRightThick
       id="stalker"
-      :style="{
+      v-bind:style="{
         opacity: opacityB,
         top: posY + 'px',
         left: posX + 'px',
@@ -34,14 +34,29 @@ export default {
       opacityA: 0,
       opacityB: 0,
       workRefs: [],
+      fps: 60, // 1秒間に処理する回数
+      fpsInterval: 0,
+      nextTime: 0,
     };
   },
   components: {
     ArrowRightThick,
   },
   mounted() {
-    setInterval(() => {
-      if (this.opacityA == 1) {
+    this.fpsInterval = 1000 / this.fps;
+    this.nextTime = Date.now() + this.fpsInterval;
+    requestAnimationFrame(this.mouseAnimation);
+  },
+  methods: {
+    mouseAnimation() {
+      requestAnimationFrame(this.mouseAnimation);
+
+      // 次の間隔まで何もしない
+      if (this.nextTime > Date.now()) return;
+
+      this.nextTime = Date.now() + this.fpsInterval;
+
+      if (this.opacityB == 1) {
         if (
           (this.moveX > 0 && this.mouseX < this.posX + this.moveX) ||
           (this.moveX < 0 && this.mouseX > this.posX + this.moveX)
@@ -60,9 +75,7 @@ export default {
           this.posY = this.posY + this.moveY;
         }
       }
-    }, 50);
-  },
-  methods: {
+    },
     setWorkRef(work) {
       this.workRefs.push(work);
     },
@@ -90,13 +103,13 @@ export default {
           event.clientY > workY_st &&
           event.clientY < workY_en
         ) {
-          this.opacityA = 1;
+          //this.opacityA = 1; 黒のカーソルは表示しない
           this.opacityB = 1;
         }
       }
 
       // 非表示の場合はポインタと同じ位置にする。
-      if (this.opacityA == 0) {
+      if (this.opacityB == 0) {
         this.posX = this.mouseX;
         this.posY = this.mouseY;
       } else {
@@ -137,10 +150,11 @@ body a:hover {
 
 #stalker {
   position: absolute;
-  width: 50px;
-  height: 50px;
-  margin: -75px 0 0 -25px;
+  width: 40px;
+  height: 40px;
+  margin: -80px 0 0 -40px;
   z-index: 5; /*一番手前に来るように*/
+  border-radius: 50%;
   opacity: 0; /*開いた瞬間非表示*/
   transition: transform 0.1s;
   pointer-events: none; /*マウス直下に常にstalker要素がくるのでホバー要素が働かなくなる。noneにすることでstalkerを無視する*/
