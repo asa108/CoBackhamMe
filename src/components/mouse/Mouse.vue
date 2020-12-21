@@ -3,7 +3,7 @@
     <!--カーソル-->
     <p
       id="cursor"
-      v-bind:style="{
+      :style="{
         opacity: opacityA,
         top: mouseY + 'px',
         left: mouseX + 'px',
@@ -12,7 +12,7 @@
     <!--マウスストーカー-->
     <ArrowRightThick
       id="stalker"
-      v-bind:style="{
+      :style="{
         opacity: opacityB,
         top: posY + 'px',
         left: posX + 'px',
@@ -131,7 +131,7 @@ body {
 }
 
 body a:hover {
-  cursor: pointer; /*aタグホバー時のカーソルも非表示にする*/
+  cursor: pointer;
 }
 
 #cursor {
