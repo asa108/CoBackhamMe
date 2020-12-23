@@ -1,5 +1,5 @@
 <template>
-  <Page ref="page">
+  <Page ref="page" v-on:mousemove="callChildMethod()">
     <Toast text="⇦SCROLL" />
     <Header />
     <Cycle :pageRect="pageRect" />
@@ -74,7 +74,7 @@
 
     <!-- WORKS -->
     <!-- <div> -->
-    <Maxwidth :max="maxwidth" v-on:mousemove="callChildMethod()">
+    <Maxwidth :max="maxwidth">
       <Mouse ref="child" />
       <div class="sectionTitleCenter">
         <button @click="openWorks" class="btn-icon">
@@ -167,7 +167,7 @@ import Images from "../media/Images.vue";
 import Movies from "../media/Movies.vue";
 import Cycle from "../components/cycle/Cycle.vue";
 import Maxwidth from "../components/common/Maxwidth.vue";
-import { ArrowRightThick } from "mdue";
+// import { ArrowRightThick } from "mdue";
 import Mouse from "../components/mouse/Mouse.vue";
 
 export default {
@@ -198,7 +198,7 @@ export default {
     Movies,
     Maxwidth,
     Cycle,
-    ArrowRightThick,
+    // ArrowRightThick,
     Mouse,
   },
   mounted() {

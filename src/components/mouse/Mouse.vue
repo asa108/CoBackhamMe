@@ -78,6 +78,7 @@ export default {
     },
     setWorkRef(work) {
       this.workRefs.push(work);
+      console.log("work", work);
     },
     getCursorCoordinate(event) {
       this.mouseX = event.pageX;

@@ -53,6 +53,7 @@ export default {
     this.$refs.child.setWorkRef(this.$refs.banto);
     this.$refs.child.setWorkRef(this.$refs.nailholic);
     this.$refs.child.setWorkRef(this.$refs.okinawa_iju);
+
     this.$nextTick(() => {
       window.scrollTo(300, 1);
       this.pageRect = this.$refs.page.getRect();
