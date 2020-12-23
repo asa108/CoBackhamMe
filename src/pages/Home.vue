@@ -73,17 +73,27 @@
     />
 
     <!-- WORKS -->
-    <Maxwidth :max="maxwidth">
+    <!-- <div> -->
+    <Maxwidth :max="maxwidth" v-on:mousemove="callChildMethod()">
+      <Mouse ref="child" />
       <div class="sectionTitleCenter">
-        <ScrollText :text="contents.WORKS.title" :textType="TEXT_TYPE.TITLE2" />
+        <button @click="openWorks" class="btn-icon">
+          <ScrollText
+            ref="key_work"
+            :text="contents.WORKS.title"
+            :textType="TEXT_TYPE.TITLE2"
+          />
+          <!-- <ArrowRightThick style="font-size: 128px" /> -->
+        </button>
       </div>
     </Maxwidth>
     <!-- 事例が入るまではUnder Construction -->
-    <div class="subTextCenter">
+    <!-- <div class="subTextCenter">
       <button @click="openWorks" class="btn-icon">
         <ArrowRightThick style="font-size: 128px" />
       </button>
-    </div>
+    </div> -->
+    <!-- </div> -->
     <!-- ここに事例を追加 Images/Moviesどちらかのコンポーネントで追加する -->
 
     <!-- 求人 -->
@@ -158,6 +168,7 @@ import Movies from "../media/Movies.vue";
 import Cycle from "../components/cycle/Cycle.vue";
 import Maxwidth from "../components/common/Maxwidth.vue";
 import { ArrowRightThick } from "mdue";
+import Mouse from "../components/mouse/Mouse.vue";
 
 export default {
   name: "App",
@@ -188,14 +199,20 @@ export default {
     Maxwidth,
     Cycle,
     ArrowRightThick,
+    Mouse,
   },
   mounted() {
+    this.$refs.child.setWorkRef(this.$refs.key_work);
+
     this.$nextTick(() => {
       window.scrollTo(300, 1);
       this.pageRect = this.$refs.page.getRect();
     });
   },
   methods: {
+    callChildMethod() {
+      this.$refs.child.getCursorCoordinate(event);
+    },
     /**
      * モバイルと通常の値を渡して判定して返す
      */

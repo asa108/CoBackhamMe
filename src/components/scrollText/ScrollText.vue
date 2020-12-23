@@ -1,6 +1,8 @@
 <template>
-  <div ref="self" :class="textType">
-    <ScrollTextInner :text="text" />
+  <div ref="mouseTarget">
+    <div ref="self" :class="textType">
+      <ScrollTextInner :text="text" />
+    </div>
   </div>
 </template>
 <script>
@@ -24,6 +26,11 @@ export default {
   },
   components: {
     ScrollTextInner,
+  },
+  methods: {
+    getRefs() {
+      return this.$refs;
+    },
   },
 };
 </script>

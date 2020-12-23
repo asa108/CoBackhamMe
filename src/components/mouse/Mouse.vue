@@ -113,8 +113,8 @@ export default {
         this.posX = this.mouseX;
         this.posY = this.mouseY;
       } else {
-        this.moveX = (this.mouseX - this.posX) / 5;
-        this.moveY = (this.mouseY - this.posY) / 5;
+        this.moveX = (this.mouseX - this.posX) / 15;
+        this.moveY = (this.mouseY - this.posY) / 15;
       }
     },
   },
@@ -131,7 +131,7 @@ body {
 }
 
 body a:hover {
-  cursor: pointer;
+  cursor: crosshair;
 }
 
 #cursor {
