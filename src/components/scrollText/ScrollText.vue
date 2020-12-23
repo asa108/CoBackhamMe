@@ -1,6 +1,6 @@
 <template>
-  <div ref="self" :class="textType">
-    <div ref="mouseTarget">
+  <div ref="mouseTarget">
+    <div ref="self" :class="textType">
       <ScrollTextInner :text="text" />
     </div>
   </div>
