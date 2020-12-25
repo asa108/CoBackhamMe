@@ -73,7 +73,6 @@
     />
 
     <!-- WORKS -->
-    <!-- <div> -->
     <Maxwidth :max="maxwidth">
       <Mouse ref="child" />
       <div class="sectionTitleCenter">
@@ -83,18 +82,10 @@
             :text="contents.WORKS.title"
             :textType="TEXT_TYPE.TITLE2"
           />
-          <!-- <ArrowRightThick style="font-size: 128px" /> -->
+          <!-- style="cursor: crosshair" -->
         </button>
       </div>
     </Maxwidth>
-    <!-- 事例が入るまではUnder Construction -->
-    <!-- <div class="subTextCenter">
-      <button @click="openWorks" class="btn-icon">
-        <ArrowRightThick style="font-size: 128px" />
-      </button>
-    </div> -->
-    <!-- </div> -->
-    <!-- ここに事例を追加 Images/Moviesどちらかのコンポーネントで追加する -->
 
     <!-- 求人 -->
     <Maxwidth :max="maxwidth">
@@ -236,7 +227,7 @@ export default {
   border: none;
   transition: all 0.3s ease-out;
   &:hover {
-    cursor: pointer;
+    cursor: crosshair;
     transform: scale(1.03);
   }
 }

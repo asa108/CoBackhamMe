@@ -132,7 +132,7 @@ body {
 }
 
 body a:hover {
-  cursor: crosshair;
+  cursor: pointer;
 }
 
 #cursor {
