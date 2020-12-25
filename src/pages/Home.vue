@@ -82,7 +82,6 @@
             :text="contents.WORKS.title"
             :textType="TEXT_TYPE.TITLE2"
           />
-          <!-- style="cursor: crosshair" -->
         </button>
       </div>
     </Maxwidth>

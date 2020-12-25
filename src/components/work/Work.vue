@@ -229,7 +229,7 @@ $w_width: 200%;
 
   &:hover {
     transform: scale(0.92);
-    cursor: pointer;
+    cursor: crosshair;
 
     .work-summary {
       .work-summary__hover {
