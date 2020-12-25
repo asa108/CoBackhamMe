@@ -1,5 +1,5 @@
 <template>
-  <Page :effect="false" ref="page" v-on:mousemove="callChildMethod()">
+  <Page :effect="false" ref="page" @mousemove="callChildMethod()">
     <Mouse ref="child" />
 
     <Toast text="⇦SCROLL" />
