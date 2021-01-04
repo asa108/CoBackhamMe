@@ -80,14 +80,12 @@
 </template>
 <script>
 import { WindowClose, AppleIos, Android } from "mdue";
-// import Movies from "../media/Movies.vue";
 
 export default {
   components: {
     WindowClose,
     AppleIos,
     Android,
-    // Movies,
   },
   data: () => {
     return {
