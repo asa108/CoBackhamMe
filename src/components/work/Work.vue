@@ -53,6 +53,19 @@
               <img :src="image" alt="" />
             </div>
           </div>
+
+          <div class="movies">
+            <div class="movie" v-for="mov in contents.items_movies" :key="mov">
+              <video
+                controls
+                muted
+                autoplay
+                playsinline
+                loop
+                :src="mov"
+              ></video>
+            </div>
+          </div>
         </div>
         <div class="count-down" :class="countDownValue ? 'in' : ''">
           <div class="label">{{ countDownValue }}</div>
@@ -67,12 +80,14 @@
 </template>
 <script>
 import { WindowClose, AppleIos, Android } from "mdue";
+// import Movies from "../media/Movies.vue";
 
 export default {
   components: {
     WindowClose,
     AppleIos,
     Android,
+    // Movies,
   },
   data: () => {
     return {
@@ -397,6 +412,17 @@ $w_width: 200%;
         align-items: center;
 
         img {
+          max-height: 90vh;
+        }
+      }
+
+      .movie {
+        padding: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        video {
           max-height: 90vh;
         }
       }

@@ -96,10 +96,10 @@ const CONTENTS = {
           }
         ],
         items: [
-          "https://storage.googleapis.com/co_backham_me/works/nailholic_splash.jpg",
-          "https://storage.googleapis.com/co_backham_me/works/nailholic_ui1_resized.jpg",
-          "https://storage.googleapis.com/co_backham_me/works/nailholic_ui2_resized.jpg",
-          "https://storage.googleapis.com/co_backham_me/works/nailholic_ui3_resized.jpg"
+          "https://storage.googleapis.com/co_backham_me/works/nailholic_splash.jpg"
+        ],
+        items_movies: [
+          "https://storage.googleapis.com/co_backham_me/works/nailholic.mp4"
         ]
       },
       {
